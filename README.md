@@ -1,2 +1,2 @@
 ## BlogSite
-This my personal blogsite, currently in construction.
+This my personal blogsite, currently under construction.
