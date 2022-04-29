@@ -1,5 +1,5 @@
-## BlogSite
+## Blog
 
-This my personal blogsite, currently under construction.
+This my personal blog, currently under construction.
 
 - https://blogsite-luishcr.vercel.app/
