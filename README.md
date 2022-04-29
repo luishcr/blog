@@ -1,5 +1,12 @@
 ## Blog
 
-This my personal blog, currently under construction.
+Blog donde suelo escribir tutoriales varios y algunos experimentos.
 
-- https://blogsite-luishcr.vercel.app/
+Este sitio web está construido con:
+- HTML y CSS
+- JavaScript
+- React
+- Nextjs
+
+
+Link: https://blog.luishcr.es
