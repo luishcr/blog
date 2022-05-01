@@ -87,17 +87,17 @@ export default function Header() {
         <ul className={styles.navSocial__list}>
           <li className={styles.navSocial__item}>
             <a href="https://www.linkedin.com/in/luishcr" target="_blank">
-              <i class="fab fa-linkedin"> </i>
+              <i className="fab fa-linkedin"> </i>
             </a>
           </li>
           <li className={styles.navSocial__item}>
             <a href="https://github.com/LuisHCR" target="_blank">
-              <i class="fab fa-github-square"> </i>
+              <i className="fab fa-github-square"> </i>
             </a>
           </li>
           <li className={styles.navSocial__item}>
             <a href="https://twitter.com/Luishcerre" target="_blank">
-              <i class="fab fa-twitter-square"> </i>
+              <i className="fab fa-twitter-square"> </i>
             </a>
           </li>
         </ul>

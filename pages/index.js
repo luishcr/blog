@@ -27,7 +27,7 @@ export default function Home({ articles }) {
           ))}
         </div>
       </div>
-      <div class={styles.articles__location}>
+      <div className={styles.articles__location}>
         <h2>Contacto</h2>
         <p>
           Puedes contactar conmigo a través de la redes sociales o rellenando el
@@ -35,19 +35,19 @@ export default function Home({ articles }) {
           <br />
           <a
             href="https://www.luishcr.es/contact"
-            class="hvr-icon-forward hvr-icon3"
+            className="hvr-icon-forward hvr-icon3"
           >
-            FORMULARIO
-            <i class="fas fa-angle-right hvr-icon-forward hvr-icon3"></i>
+            Formulario
+            <i className="fas fa-angle-right hvr-icon-forward hvr-icon3"></i>
           </a>
         </p>
         <br />
 
-        <i class="fas fa-map-marked-alt"></i>
+        <i className="fas fa-map-marked-alt"></i>
         <p>Desde Alicante/Alacant 👋🏽 para el mundo.</p>
         <br />
-        <a href="#" class="hvr-icon-up hvr-icon">
-          Volver arriba <i class="fas fa-angle-up hvr-icon-up hvr-icon"></i>
+        <a href="#" className="hvr-icon-up hvr-icon">
+          Volver arriba <i className="fas fa-angle-up hvr-icon-up hvr-icon"></i>
         </a>
       </div>
     </div>

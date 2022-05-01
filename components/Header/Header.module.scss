@@ -73,7 +73,6 @@
   display: flex;
 
   a {
-    text-transform: uppercase;
     color: var(--secondary-color);
     font-weight: 700;
     font-size: 1.7rem;
@@ -91,9 +90,7 @@
       padding: 0.5rem;
     }
 
-    @media (max-width: 736px) {
-      font-size: 1.5rem;
-    }
+   
 
     @media (max-width: 676px) {
       font-size: 1.8rem;

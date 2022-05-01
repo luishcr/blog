@@ -15,27 +15,15 @@
   }
 
   a {
-    display: flex;
-    justify-content: center;
-    background: var(--primary-color);
-    color: var(--secondary-color);
-    border: none;
-    padding: 0.8rem 1.6rem;
-    border-radius: 0.5rem;
-    cursor: pointer;
     text-decoration: none;
-    font-size: 2rem;
-    font-family: inherit;
+    color: var(--primary-color);
+    font-weight: 500;
     margin: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
 
-    &:focus {
-      outline: none;
-    }
-
-    &:hover {
-      color: var(--terciary-color);
-      background-color: var(--dark-color);
-      transition: 0.5s;
+    i {
+      font-size: 2rem;
     }
   }
 }
@@ -46,4 +34,9 @@
   margin-bottom: 2rem;
   margin-top: 1rem;
   padding: 0.3rem 1rem;
+}
+
+.articles__btn {
+  display: flex;
+  justify-content: end;
 }
