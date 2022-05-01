@@ -3,22 +3,52 @@ import path from "path";
 import matter from "gray-matter";
 import Head from "next/head";
 import Article from "../components/Article/Article";
+import styles from "./Home.module.scss";
 import { sortByDate } from "../utils/main";
 
 export default function Home({ articles }) {
   return (
     <div>
       <Head>
-        <title>👨🏽‍💻Blogsite</title>
+        <script
+          src="https://kit.fontawesome.com/a25f409e18.js"
+          crossOrigin="anonymous"
+        ></script>
+        <title>👨🏽‍💻 Blog.luishcr</title>
       </Head>
 
-      <h1>
-        Bienvenidos a mi<a href="#"> Blog</a>
-      </h1>
-      <div className="articles__grid">
-        {articles.map((article, index) => (
-          <Article key={index} article={article} />
-        ))}
+      <div>
+        <h1 className={styles.title}>
+          Blog<span className={styles.span}>de notas</span>
+        </h1>
+        <div className={styles.articles__grid}>
+          {articles.map((article, index) => (
+            <Article key={index} article={article} />
+          ))}
+        </div>
+      </div>
+      <div class={styles.articles__location}>
+        <h2>Contacto</h2>
+        <p>
+          Puedes contactar conmigo a través de la redes sociales o rellenando el
+          siguiente formulario
+          <br />
+          <a
+            href="https://www.luishcr.es/contact"
+            class="hvr-icon-forward hvr-icon3"
+          >
+            FORMULARIO
+            <i class="fas fa-angle-right hvr-icon-forward hvr-icon3"></i>
+          </a>
+        </p>
+        <br />
+
+        <i class="fas fa-map-marked-alt"></i>
+        <p>Desde Alicante/Alacant 👋🏽 para el mundo.</p>
+        <br />
+        <a href="#" class="hvr-icon-up hvr-icon">
+          Volver arriba <i class="fas fa-angle-up hvr-icon-up hvr-icon"></i>
+        </a>
       </div>
     </div>
   );

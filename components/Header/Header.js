@@ -1,11 +1,34 @@
 import Link from "next/link";
 import styles from "./Header.module.scss";
+import "../../utils/main";
 
 export default function Header() {
   return (
-    <header className={styles.nav__background}>
-      <nav className={styles.nav__menu}>
-        <div className={styles.nav__mobile}>
+    <header>
+      <nav className={styles.nav__background}>
+        <div className={styles.nav__menu}>
+          <div className={styles.nav__mobile}>
+            <div className={styles.nav__mobile_logo}>
+              <a href="index.html">
+                <img
+                  src="images/LogoMakr-306kZJ.png"
+                  className="white-logos"
+                  alt="LOGO"
+                />
+                <span>
+                  <img
+                    src="images/LogoMakr-7bM4w8.png"
+                    className="yellow-logos"
+                    alt="LOGO"
+                  />
+                </span>
+              </a>
+            </div>
+            <button className={styles.nav__toggle} id="nav__toggle">
+              <img src="images/toggle.png" alt="toggle button" />
+            </button>
+          </div>
+
           <div className={styles.nav__logo}>
             <a href="index.html">
               <img
@@ -22,56 +45,59 @@ export default function Header() {
               </span>
             </a>
           </div>
-          <button className="nav-toggle">
-            <img src="images/toggle.png" alt="toggleNav" />
-          </button>
-        </div>
 
-        <div className={styles.nav__logo}>
-          <a href="index.html">
-            <img
-              src="images/LogoMakr-306kZJ.png"
-              className="white-logos"
-              alt="LOGO"
-            />
-            <span>
-              <img
-                src="images/LogoMakr-7bM4w8.png"
-                className="yellow-logos"
-                alt="LOGO"
-              />
-            </span>
-          </a>
-        </div>
-
-        <ul className={styles.nav__links} /* nav-links_hider" id="nav-links"*/>
-          <li>
-            <Link href="https://www.luishcr.es">
-              <a>
+          <ul
+            className={styles.nav__links}
+            id="nav__links" /* nav-links_hider" id="nav-links"*/
+          >
+            <li>
+              <a href="https://www.luishcr.es">
                 <i className="fas fa-home"></i> Inicio
               </a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/">
-              <a>
-                <i className="fas fa-book"></i> Blog
+            </li>
+            <li>
+              <Link href="/">
+                <a>
+                  <i className="fas fa-book"></i> Blog
+                </a>
+              </Link>
+            </li>
+            <li>
+              <a href="https://www.luishcr.es/portfolio">
+                <i className="fas fa-file-code"></i> Portafolio
               </a>
-            </Link>
-          </li>
-          <li>
-            <a href="portfolio.html">
-              <i className="fas fa-file-code"></i> Portafolio
+            </li>
+            <li>
+              <a
+                href="https://www.luishcr.es/docs/LuisHCR_CV.pdf"
+                target="_blank"
+              >
+                <i className="fas fa-file-pdf"></i> Currículum
+              </a>
+            </li>
+            <li>
+              <a href="https://www.luishcr.es/contact">
+                <i className="fas fa-envelope"></i> Contacto
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <nav className={styles.navSocial__icons}>
+        <ul className={styles.navSocial__list}>
+          <li className={styles.navSocial__item}>
+            <a href="https://www.linkedin.com/in/luishcr" target="_blank">
+              <i class="fab fa-linkedin"> </i>
             </a>
           </li>
-          <li>
-            <a href="docs/LuisHCR_CV.pdf" target="_blank">
-              <i className="fas fa-file-pdf"></i> Currículum
+          <li className={styles.navSocial__item}>
+            <a href="https://github.com/LuisHCR" target="_blank">
+              <i class="fab fa-github-square"> </i>
             </a>
           </li>
-          <li>
-            <a href="contact.html">
-              <i className="fas fa-envelope"></i> Contacto
+          <li className={styles.navSocial__item}>
+            <a href="https://twitter.com/Luishcerre" target="_blank">
+              <i class="fab fa-twitter-square"> </i>
             </a>
           </li>
         </ul>

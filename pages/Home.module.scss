@@ -1,0 +1,62 @@
+/*  ESTILOS DEL HOME  */
+
+.title {
+  text-align: center;
+  margin: 4rem;
+  font-size: 4rem;
+}
+
+.span {
+  color: var(--neutral-color);
+  font-size: 1.8rem;
+  margin-left: 1rem;
+  border: 1px solid var(--neutral-color);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.articles__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  margin-top: 3rem;
+
+  @media (max-width: 60rem) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 40rem) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.articles__location {
+  margin-top: 8rem;
+  padding: 2rem;
+  text-align: center;
+  h2 {
+    margin-top: 2rem;
+    padding: 2rem;
+  }
+
+  p {
+    margin-bottom: 4rem;
+    line-height: 2;
+  }
+
+  i {
+    padding: 1rem;
+    font-size: 4rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: 1rem;
+
+    i {
+      font-size: 2rem;
+    }
+  }
+}
