@@ -28,16 +28,16 @@ export default function Home({ articles }) {
         </div>
       </div>
       <div className={styles.articles__location}>
-        <h2>Contacto</h2>
+        <h2>¿Alguna errata?</h2>
         <p>
-          Puedes contactar conmigo a través de la redes sociales o rellenando el
-          siguiente formulario
+          Este blog es de código abierto, por lo que si quieres, puedes
+          modificar y proponer cambios en el repositorio de
           <br />
           <a
-            href="https://www.luishcr.es/contact"
+            href="https://github.com/luishcr/blog"
             className="hvr-icon-forward hvr-icon3"
           >
-            Formulario
+            github
             <i className="fas fa-angle-right hvr-icon-forward hvr-icon3"></i>
           </a>
         </p>

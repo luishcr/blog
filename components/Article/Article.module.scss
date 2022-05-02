@@ -9,9 +9,14 @@
     border-radius: 1rem;
   }
 
+  h3 {
+    line-height: 2.7rem;
+  }
+
   p {
     padding: 0.3rem 1rem;
     margin: 2rem 0rem;
+    line-height: 2.7rem;
   }
 
   a {
@@ -20,16 +25,16 @@
     font-weight: 500;
     margin: 1rem;
     padding: 1rem;
-    border-radius: 1rem;
 
     i {
       font-size: 2rem;
+      padding: 0.5rem;
     }
   }
 }
 
 .articles__date {
-  background: var(--neutral-color);
+  background: #f4f4f4;
   border-radius: 0.5rem;
   margin-bottom: 2rem;
   margin-top: 1rem;
@@ -38,5 +43,5 @@
 
 .articles__btn {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }

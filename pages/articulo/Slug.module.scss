@@ -1,6 +1,14 @@
-/*  Estilos Slug  */
+/*  Estilos Página del Artículo  */
 
 .articlePage__btn {
+  border: none;
+  background: none;
+  color: inherit;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+
   a {
     text-decoration: none;
     color: var(--primary-color);
@@ -8,9 +16,83 @@
     margin: 1rem;
     padding: 1rem;
   }
+
+  i {
+    font-size: 2rem;
+    padding: 0.5rem;
+  }
 }
 
 .articlePage__body {
+  margin: 1rem auto;
+  padding: 1rem;
+
+  h1 {
+    margin: 2rem;
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  h2 {
+    text-transform: none;
+    text-align: left;
+    padding-left: 0;
+  }
+
+  h3 {
+    margin: 1rem;
+  }
+
+  figure {
+    width: 55%;
+    margin: auto;
+    border: 0.1rem solid var(--neutral-color);
+    border-radius: 0.2rem;
+    padding: 0.5rem;
+
+    img {
+      width: 100%;
+      margin-bottom: 0.2rem;
+      border-radius: 0.2rem;
+    }
+
+    figcaption {
+      text-align: center;
+      background-color: black;
+      color: whitesmoke;
+      border-radius: 0.2rem;
+      padding: 1rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      font-style: italic;
+      text-align: center;
+    }
+
+    @media (max-width: 60rem) {
+      width: 70%;
+    }
+    @media (max-width: 40rem) {
+      width: 100%;
+    }
+  }
+}
+
+.articlePage__content {
   margin: 1rem;
   padding: 1rem;
+  line-height: 3rem;
+
+  li {
+    margin-left: 2rem;
+  }
+
+  pre {
+    padding: 1rem;
+    background-color: var(--neutral-color);
+    margin: 1rem;
+    border: 1px solid var(--dark-color);
+    border-radius: 0.2rem;
+    code {
+    }
+  }
 }

@@ -11,13 +11,13 @@ export default function Header() {
             <div className={styles.nav__mobile_logo}>
               <a href="index.html">
                 <img
-                  src="images/LogoMakr-306kZJ.png"
+                  src="images/whiteLogo.png"
                   className="white-logos"
                   alt="LOGO"
                 />
                 <span>
                   <img
-                    src="images/LogoMakr-7bM4w8.png"
+                    src="images/yellowLogo.png"
                     className="yellow-logos"
                     alt="LOGO"
                   />
@@ -32,13 +32,13 @@ export default function Header() {
           <div className={styles.nav__logo}>
             <a href="index.html">
               <img
-                src="images/LogoMakr-306kZJ.png"
+                src="images/whiteLogo.png"
                 className="white-logos"
                 alt="LOGO"
               />
               <span>
                 <img
-                  src="images/LogoMakr-7bM4w8.png"
+                  src="images/yellowLogo.png"
                   className="yellow-logos"
                   alt="LOGO"
                 />

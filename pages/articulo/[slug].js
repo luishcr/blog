@@ -12,27 +12,28 @@ export default function ArticlePage({
 }) {
   return (
     <>
-      <div className={styles.articlePage__btn}>
+      <button className={styles.articlePage__btn}>
         <Link href="/">
-          <a className="hvr-icon-forward hvr-icon3">
-            Atrás{" "}
-            <i className="fas fa-angle-right hvr-icon-forward hvr-icon3"></i>
+          <a className="hvr-icon-back hvr-icon4">
+            <i className="fas fa-angle-left hvr-icon-back hvr-icon4"></i> Atrás
           </a>
         </Link>
-      </div>
+      </button>
 
-      <div className={styles.articlePage__body}>
-        <h1 className={styles.articlePage__title}>{title}</h1>
-        <div className={styles.articlePage__date}>Publicado: {date}</div>
-        <img src={cover_image} alt="Portada del artículo" />
-        <div className="post-body">
-          <div
-            dangerouslySetInnerHTML={{
-              __html: marked(content),
-            }}
-          ></div>
-        </div>
-      </div>
+      <article className={styles.articlePage__body}>
+        <h1>{title}</h1>
+        <figure>
+          <img src={cover_image} alt="Portada del artículo" />
+          <figcaption> Escrito por luishcr el {date}</figcaption>
+        </figure>
+
+        <div
+          className={styles.articlePage__content}
+          dangerouslySetInnerHTML={{
+            __html: marked(content),
+          }}
+        ></div>
+      </article>
     </>
   );
 }

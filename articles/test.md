@@ -1,6 +1,6 @@
 ---
 title: "Segundo articulo"
-date: "2022-04-28"
+date: "5 Mayo, 2022"
 excerpt: "Yeso?"
 cover_image: "/images/articles/img1.jpg"
 ---
