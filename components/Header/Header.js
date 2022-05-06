@@ -9,15 +9,15 @@ export default function Header() {
         <div className={styles.nav__menu}>
           <div className={styles.nav__mobile}>
             <div className={styles.nav__mobile_logo}>
-              <a href="index.html">
+              <a href="https://www.luishcr.es">
                 <img
-                  src="images/whiteLogo.png"
+                  src="../../images/whiteLogo.png"
                   className="white-logos"
                   alt="LOGO"
                 />
                 <span>
                   <img
-                    src="images/yellowLogo.png"
+                    src="../../images/yellowLogo.png"
                     className="yellow-logos"
                     alt="LOGO"
                   />
@@ -25,20 +25,20 @@ export default function Header() {
               </a>
             </div>
             <button className={styles.nav__toggle} id="nav__toggle">
-              <img src="images/toggle.png" alt="toggle button" />
+              <img src="../../images/toggle.png" alt="toggle button" />
             </button>
           </div>
 
           <div className={styles.nav__logo}>
-            <a href="index.html">
+            <a href="https://www.luishcr.es">
               <img
-                src="images/whiteLogo.png"
+                src="../../images/whiteLogo.png"
                 className="white-logos"
                 alt="LOGO"
               />
               <span>
                 <img
-                  src="images/yellowLogo.png"
+                  src="../../images/yellowLogo.png"
                   className="yellow-logos"
                   alt="LOGO"
                 />

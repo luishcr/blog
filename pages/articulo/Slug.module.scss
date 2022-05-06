@@ -58,8 +58,8 @@
 
     figcaption {
       text-align: center;
-      background-color: black;
-      color: whitesmoke;
+      background-color: var(--dark-color);
+      color: var(--secondary-color);
       border-radius: 0.2rem;
       padding: 1rem;
       font-size: 1.2rem;
@@ -88,11 +88,23 @@
 
   pre {
     padding: 1rem;
-    background-color: var(--neutral-color);
+    background-color: var(--consola-color);
     margin: 1rem;
     border: 1px solid var(--dark-color);
-    border-radius: 0.2rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
     code {
+      color: var(--secondary-color);
+
+      text {
+        width: auto;
+      }
+    }
+  }
+
+  p {
+    img {
+      width: 100%;
     }
   }
 }

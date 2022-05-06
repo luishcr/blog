@@ -7,13 +7,13 @@ export default function Footer() {
         <div className={styles.footer__logo}>
           <a href="index.html">
             <img
-              src="images/whiteLogo.png"
+              src="../../images/whiteLogo.png"
               className="white-logos"
               alt="LOGO"
             />
             <span>
               <img
-                src="images/yellowLogo.png"
+                src="../../images/yellowLogo.png"
                 className="yellow-logos"
                 alt="LOGO"
               />

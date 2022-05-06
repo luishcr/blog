@@ -22,9 +22,13 @@ export default function ArticlePage({
 
       <article className={styles.articlePage__body}>
         <h1>{title}</h1>
+        <h3> luishcr • {date}</h3>
         <figure>
           <img src={cover_image} alt="Portada del artículo" />
-          <figcaption> Escrito por luishcr el {date}</figcaption>
+          <figcaption>
+            {" "}
+            Artículo 1 - Configura un entorno de desarrollo.
+          </figcaption>
         </figure>
 
         <div

@@ -1,7 +1,6 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import Head from "next/head";
 import Article from "../components/Article/Article";
 import styles from "./Home.module.scss";
 import { sortByDate } from "../utils/main";
@@ -9,14 +8,6 @@ import { sortByDate } from "../utils/main";
 export default function Home({ articles }) {
   return (
     <div>
-      <Head>
-        <script
-          src="https://kit.fontawesome.com/a25f409e18.js"
-          crossOrigin="anonymous"
-        ></script>
-        <title>👨🏽‍💻 Blog.luishcr</title>
-      </Head>
-
       <div>
         <h1 className={styles.title}>
           Blog<span className={styles.span}>de notas</span>
