@@ -1,9 +1,13 @@
 ---
 title: "Entorno de desarrollo con WSL, VS Code, Windows Terminal, NerdFonts, ZSH, P10K..."
-date: "2 Mayo, 2022"
-excerpt: "Configura un entorno de desarrollo con Windows Subsystem for Linux, VS Code con las mejores extensiones y terminal con ZSH, NerdFonts con Powerlevel 10k y otras utilidades."
+date: "8 Mayo, 2022"
+excerpt: "Configura un entorno de desarrollo con Windows Subsystem for Linux, VS Code con las mejores extensiones y terminal con ZSH, NerdFonts, Powerlevel 10k y otras utilidades."
 cover_image: "/images/articles/1/img1.jpg"
 ---
+
+## Resultado final
+![WSL install](/images/articles/1/preview.gif)
+
 
 ## Windows Subsystem for Linux (WSL)
 WSL nos permite disponer de todo lo que nos ofrece Linux junto a Windows en nuestra PC sin arranque dual. Como requisitos, nos pide Windows 10 versión 2004 y posteriores (compilación 19041 y posteriores) o Windows 11. Para su instalación, simplemente buscaremos desde la barra de tareas "Powershell", ejecutaremos como Administrador, y escribiremos los siguientes comandos:
@@ -106,22 +110,6 @@ sudo apt install zsh
 
 &nbsp;
 
-- Powerlevel10k - un tema para zsh. Instalación manual. Clonamos el repositorio en el directorio /home/usuario.
-```bash
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
-echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
-```
-
-&nbsp;
-
-- Abrimos zsh, y seguimos el proceso de configuración. Deberíamos de ver los iconos gracias a las NerdFonts. Esta configuración se puede repetir tanto como queramos editando/borrando el fichero configurable .p10k.zsh que se crea en el directorio /home/usuario o con el comando "p10k configure".
-```bash
-zsh
-p10k configure
-```
-
-&nbsp;
-
 - Asignamos zsh como Shell por defecto del sistema para el usuario.
 ```bash
 chsh -s /bin/zsh
@@ -129,7 +117,32 @@ chsh -s /bin/zsh
 
 &nbsp;
 
-- Repetimos los 3 pasos anteriores para el usuario root y creamos un enlace simbólico del fichero .zshrc del usuario en el directorio root, si ya existe, borramos el antiguo.
+- Instalamoos última versión de Node con Node Version Manager.
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | zsh
+nvm install node
+```
+
+&nbsp;
+
+- Powerlevel10k - un tema para zsh. Instalación manual.
+```bash
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+```
+
+&nbsp;
+
+- Configuración del tema con el comando "zsh" o "p10k configure". Al finalizar se crea el fichero .p10k.zsh en el directorio /home/usuario.
+```bash
+zsh
+p10k configure
+```
+
+
+&nbsp;
+
+- Repetimos los 2 pasos anteriores para el usuario root y creamos enlace simbólico del fichero .zshrc. Si ya existe, borramos el antiguo.
 ```bash
 sudo su
 cd /home/root
@@ -154,10 +167,40 @@ sudo dpkg -i lsd_0.21.0_amd64.deb
 
 &nbsp;
 
-- ZSH-Plugins: ZSH-Autosuggestions,
-
-- Aliases para BAT y LSD, añadir al fichero .zshrc
+- FZF, un buscador en la línea de comando.
 ```bash
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+```
+
+&nbsp; 
+
+- Plugins: zsh-autosuggestions, zsh-syntax-highlighting, sudo-plugin
+```bash
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+```
+```bash
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
+```
+```bash
+mkdir ~/.zsh/sudo-plugin && cd ~/.zsh/sudo-plugin
+wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/sudo/sudo.plugin.zsh 
+```
+
+&nbsp;
+
+- Se debe crear un enlace simbólico de la carpeta .zsh en /home/root.
+```bash
+sudo su
+cd 
+ln -s /home/usuario/.zsh .zsh
+```
+
+&nbsp;
+
+- Agregar al fichero .zshrc (Alias para BAT, LSD y source para fzf y plugins).
+```bash
+#Custom aliases for BAT y LSD
 alias cat='/bin/bat'
 alias catn='/bin/cat'
 alias catnl='/bin/bat --paging=never'
@@ -166,19 +209,17 @@ alias la='lsd -a --group-dirs=first'
 alias l='lsd --group-dirs=first'
 alias lla='lsd -lha --group-dirs=first'
 alias ls='lsd --group-dirs=first'
-```
-
-&nbsp; 
-
-- FZF, un buscador en la línea de comando.
-```bash
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
+#fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+#Plugins
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.zsh/sudo-plugin/sudo.plugin.zsh
 ```
 
 &nbsp;
 
-- HTTPie, cliente http para interactuar con API's.
+- HTTPie, cliente http en CLI con resaltado de sintaxis.
 ```bash
 curl -SsL https://packages.httpie.io/deb/KEY.gpg | apt-key add -
 curl -SsL -o /etc/apt/sources.list.d/httpie.list https://packages.httpie.io/deb/httpie.list
@@ -187,6 +228,47 @@ apt install httpie
 apt upgrade httpie
 ```
 
+
+
+## Visual Studio Code.
+El mejor editor de código, respaldado por una gran comunidad y desarrollado por Microsoft.
+
+Su configuración es sencilla desde la interfaz gráfica, aunque tras su instalación, por defecto dispone de un configurable en la ruta "/C:/Users/usuario/AppData/Roaming/Code/User/settings.json" en el que deberíamos de tener por lo menos estas líneas: 
+```json
+"editor.bracketPairColorization.enabled": true,
+"editor.guides.bracketPairs": "active",
+"editor.formatOnSave": true,
+"terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Ubuntu (WSL)": {
+      "path": "C:\\Windows\\System32\\wsl.exe",
+      "args": ["-d", "Ubuntu"]
+    }
+  },
+"terminal.integrated.defaultProfile.windows": "Ubuntu (WSL)",
+// Aquí añadimos el nombre de la fuente de NerdFonts para que se vea bien la terminal integrada
+"editor.fontFamily": "Hack Nerd Font Mono, Consolas, 'Courier New', monospace",
+```
+
 &nbsp;
+
+Algunas extensiones recomendables para que le heches un ojo son:
+- Cualquier tema oscuro que te guste 😀 (2077, Cyberpunk, Andromeda... etc)
+- Remote WSL
+- Material Icon Theme
+- Prettier
+- Color Highlight
+- Path Intellisense
+- Auto Rename Tag
+- Live Preview
+- MySQL
+- PHP Intelephense
+- vscode-pdf
+- Docker
+- Git Graph
+
 
 

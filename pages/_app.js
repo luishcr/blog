@@ -7,12 +7,9 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <script
-          src="https://kit.fontawesome.com/a25f409e18.js"
-          crossOrigin="anonymous"
-        ></script>
-        <title>👨🏽‍💻 Blog.luishcr</title>
+        <title>👨🏽‍💻 blog.luishcr</title>
       </Head>
+
       <Header />
       <main className="container boxshadow boxborder">
         <Component {...pageProps} />
