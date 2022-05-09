@@ -113,6 +113,15 @@ export default function Header() {
               <i className="fab fa-twitter-square"> </i>
             </a>
           </li>
+          <li className={styles.navSocial__item}>
+            <a
+              href="https://stackoverflow.com/users/15593896/luishcr"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i class="fab fa-stack-overflow"></i>
+            </a>
+          </li>
         </ul>
       </nav>
     </header>

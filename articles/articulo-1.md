@@ -1,6 +1,6 @@
 ---
 title: "Entorno de desarrollo con WSL, VS Code, Windows Terminal, NerdFonts, ZSH, P10K..."
-date: "8 Mayo, 2022"
+date: "9 Mayo, 2022"
 excerpt: "Configura un entorno de desarrollo con Windows Subsystem for Linux, VS Code con las mejores extensiones y terminal con ZSH, NerdFonts, Powerlevel 10k y otras utilidades."
 cover_image: "/images/articles/1/img1.jpg"
 ---
