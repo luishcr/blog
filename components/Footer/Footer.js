@@ -23,17 +23,29 @@ export default function Footer() {
         <div>
           <ul className={styles.footer__list}>
             <li className={styles.footerSocial__item}>
-              <a href="https://www.linkedin.com/in/luishcr" target="_blank">
+              <a
+                href="https://www.linkedin.com/in/luishcr"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <i className="fab fa-linkedin"> </i>
               </a>
             </li>
             <li className={styles.footerSocial__item}>
-              <a href="https://github.com/LuisHCR" target="_blank">
+              <a
+                href="https://github.com/LuisHCR"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <i className="fab fa-github-square"> </i>
               </a>
             </li>
             <li className={styles.footerSocial__item}>
-              <a href="https://twitter.com/luishcerre" target="_blank">
+              <a
+                href="https://twitter.com/luishcerre"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <i className="fab fa-twitter-square"> </i>
               </a>
             </li>

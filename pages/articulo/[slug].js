@@ -26,7 +26,7 @@ export default function ArticlePage({
         <h3> luishcr • {date}</h3>
         <figure>
           <img src={cover_image} alt="Portada del artículo" />
-          <figcaption>"Nunca pares de aprender".</figcaption>
+          <figcaption>&quot;Nunca pares de aprender&quot;.</figcaption>
         </figure>
 
         <div
@@ -42,21 +42,24 @@ export default function ArticlePage({
           <a
             className="twitter-share-button hvr-grow"
             href="https://twitter.com/intent/tweet?"
-            target="__blank"
+            target="_blank"
+            rel="noreferrer"
           >
             <i className="fa-brands fa-twitter"></i>
           </a>
           <a
             className="twitter-share-button hvr-grow"
             href="https://www.linkedin.com/sharing/share-offsite/?"
-            target="__blank"
+            target="_blank"
+            rel="noreferrer"
           >
             <i className="fa-brands fa-linkedin-in"></i>
           </a>
           <a
             className="twitter-share-button hvr-grow"
             href="https://www.facebook.com/sharer.php?"
-            target="__blank"
+            target="_blank"
+            rel="noreferrer"
           >
             <i className="fa-brands fa-facebook-f"></i>
           </a>

@@ -55,7 +55,7 @@ En el proceso de instalación indicaremos el nombre de usuario, host y contrase�
 
 
 ## Windows Terminal con Nerd Fonts
-Con esta herramienta mejoraremos la interfaz de línea de comando de WSL, ya que nos permite abrir varias ventanas o interfaces a la vez, colocar una imagen de fondo, utilizar fuentes con iconos en consola gracias a las <a href="https://www.nerdfonts.com" target="_blank"> Nerd Fonts</a> y muchas más funciones. Así que una vez instalado cualquiera de las Nerd Fonts y Windows Terminal desde Microsoft Store, procedemos a su personalización, que se puede hacer o bien desde la propia interfaz gráfica de la terminal (Configuración > Perfiles/apariencia.. etc) o abriendo el configurable .JSON:
+Con esta herramienta mejoraremos la interfaz de línea de comando de WSL, ya que nos permite abrir varias ventanas o interfaces a la vez, colocar una imagen de fondo, utilizar fuentes con iconos en consola gracias a las <a href="https://www.nerdfonts.com" target="_blank" rel="noreferrer"> Nerd Fonts</a> y muchas más funciones. Así que una vez instalado cualquiera de las Nerd Fonts y Windows Terminal desde Microsoft Store, procedemos a su personalización, que se puede hacer o bien desde la propia interfaz gráfica de la terminal (Configuración > Perfiles/apariencia.. etc) o abriendo el configurable .JSON:
 
 &nbsp;
 

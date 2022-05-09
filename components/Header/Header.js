@@ -71,6 +71,7 @@ export default function Header() {
               <a
                 href="https://www.luishcr.es/docs/LuisHCR_CV.pdf"
                 target="_blank"
+                rel="noreferrer"
               >
                 <i className="fas fa-file-pdf"></i> Currículum
               </a>
@@ -86,17 +87,29 @@ export default function Header() {
       <nav className={styles.navSocial__icons}>
         <ul className={styles.navSocial__list}>
           <li className={styles.navSocial__item}>
-            <a href="https://www.linkedin.com/in/luishcr" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/luishcr"
+              target="_blank"
+              rel="noreferrer"
+            >
               <i className="fab fa-linkedin"> </i>
             </a>
           </li>
           <li className={styles.navSocial__item}>
-            <a href="https://github.com/LuisHCR" target="_blank">
+            <a
+              href="https://github.com/LuisHCR"
+              target="_blank"
+              rel="noreferrer"
+            >
               <i className="fab fa-github-square"> </i>
             </a>
           </li>
           <li className={styles.navSocial__item}>
-            <a href="https://twitter.com/Luishcerre" target="_blank">
+            <a
+              href="https://twitter.com/Luishcerre"
+              target="_blank"
+              rel="noreferrer"
+            >
               <i className="fab fa-twitter-square"> </i>
             </a>
           </li>
