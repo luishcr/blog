@@ -18,11 +18,11 @@ export default function Home({ articles }) {
           ))}
         </div>
       </div>
+
       <div className={styles.articles__location}>
         <h2>¿Alguna errata?</h2>
         <p>
-          Este blog es de código abierto, por lo que si quieres, puedes
-          modificar y proponer cambios en el repositorio de
+          Puedes modificar y proponer cambios en el repositorio de
           <br />
           <a
             href="https://github.com/luishcr/blog"

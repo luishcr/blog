@@ -67,6 +67,9 @@
       width: 100%;
     }
   }
+  @media (max-width: 40rem) {
+    padding: 0;
+  }
 }
 
 .articlePage__content {
@@ -97,6 +100,9 @@
   p {
     img {
       width: 100%;
+    }
+    @media (max-width: 60rem) {
+      text-align: justify;
     }
   }
 }
