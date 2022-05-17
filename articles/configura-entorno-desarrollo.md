@@ -1,6 +1,6 @@
 ---
 title: "Entorno de desarrollo con WSL, VS Code, Windows Terminal, NerdFonts, ZSH, P10K..."
-date: "9 Mayo, 2022"
+date: "18 Mayo, 2022"
 excerpt: "Configura un entorno de desarrollo con Windows Subsystem for Linux, VS Code con las mejores extensiones y terminal con ZSH, NerdFonts, Powerlevel 10k y otras utilidades."
 cover_image: "/images/articles/1/img1.jpg"
 ---
@@ -136,7 +136,7 @@ chsh -s /bin/zsh
 
 &nbsp;
 
-- Instalamoos última versión de Node con Node Version Manager.
+- Instalamos la última versión de Node con Node Version Manager.
 
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | zsh
@@ -163,7 +163,7 @@ p10k configure
 
 &nbsp;
 
-- Repetimos los 2 pasos anteriores para el usuario root y creamos enlace simbólico del fichero .zshrc. Si ya existe, borramos el antiguo.
+- Repetimos los 2 pasos anteriores para el usuario root y creamos un enlace simbólico del fichero .zshrc. Si ya existe, borramos el antiguo.
 
 ```bash
 sudo su
@@ -227,7 +227,7 @@ ln -s /home/usuario/.zsh .zsh
 
 &nbsp;
 
-- Agregar al fichero .zshrc (Alias para BAT, LSD y source para fzf y plugins).
+- Agregar al fichero .zshrc de /home/usuario (Alias para BAT, LSD y source para fzf y plugins).
 
 ```bash
 #Custom aliases for BAT y LSD
