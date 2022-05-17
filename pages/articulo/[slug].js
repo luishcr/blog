@@ -1,3 +1,4 @@
+import Script from "next/script";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -12,6 +13,10 @@ export default function ArticlePage({
 }) {
   return (
     <>
+      <Script
+        src="https://kit.fontawesome.com/a25f409e18.js"
+        crossOrigin="anonymous"
+      ></Script>
       <div className={styles.articlePage__backBtn}>
         <Link href="/">
           <a className="hvr-icon-back">
@@ -35,36 +40,35 @@ export default function ArticlePage({
             __html: marked(content),
           }}
         ></div>
-
-        <div className={styles.articlePage__share}>
-          <h2>¿Te ha parecido útil?</h2>
-          <p>Compártelo en tus redes:</p>
-          <a
-            className="twitter-share-button hvr-grow"
-            href="https://twitter.com/intent/tweet?"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <i className="fa-brands fa-twitter"></i>
-          </a>
-          <a
-            className="twitter-share-button hvr-grow"
-            href="https://www.linkedin.com/sharing/share-offsite/?"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <i className="fa-brands fa-linkedin-in"></i>
-          </a>
-          <a
-            className="twitter-share-button hvr-grow"
-            href="https://www.facebook.com/sharer.php?"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <i className="fa-brands fa-facebook-f"></i>
-          </a>
-        </div>
       </article>
+      <div className={styles.articlePage__share}>
+        <h2>¿Te ha parecido útil?</h2>
+        <p>Compártelo en tus redes:</p>
+        <a
+          className=" hvr-grow"
+          href="https://twitter.com/intent/tweet?url=https://blog.luishcr.es"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <i className="fa-brands fa-twitter"></i>
+        </a>
+        <a
+          className=" hvr-grow"
+          href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.luishcr.es"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <i className="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a
+          className=" hvr-grow"
+          href="https://www.facebook.com/sharer/sharer.php?u=https://blog.luishcr.es"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <i className="fa-brands fa-facebook-f"></i>
+        </a>
+      </div>
       <div className={styles.articlePage__upBtn}>
         <a href="#" className="hvr-icon-up">
           Ir arriba <i className="fas fa-angle-up hvr-icon-up hvr-icon"></i>
