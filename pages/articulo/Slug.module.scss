@@ -8,11 +8,6 @@
     margin: 1rem;
     padding: 1rem;
   }
-
-  i {
-    font-size: 2rem;
-    padding: 0.5rem;
-  }
 }
 
 .articlePage__body {
@@ -108,6 +103,7 @@
 }
 
 .articlePage__share {
+  margin-top: 4rem;
   text-align: center;
   h2 {
     text-align: center;
@@ -116,7 +112,8 @@
   a {
     text-decoration: none;
     color: var(--primary-color);
-    i {
+    svg {
+      font-size: 2.5rem;
       margin: 2rem;
     }
   }
@@ -132,10 +129,5 @@
     font-weight: bold;
     margin: 1rem;
     padding: 1rem;
-  }
-
-  i {
-    font-size: 2rem;
-    padding: 0.5rem;
   }
 }

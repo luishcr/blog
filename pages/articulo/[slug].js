@@ -1,10 +1,18 @@
-import Script from "next/script";
+import Image from "next/image";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { marked } from "marked";
 import Link from "next/link";
 import styles from "./Slug.module.scss";
+import {
+  FaChevronLeft,
+  FaChevronUp,
+  FaFacebookSquare,
+  FaLinkedin,
+  FaTwitterSquare,
+} from "react-icons/fa";
+import { IconContext } from "react-icons";
 
 export default function ArticlePage({
   frontmatter: { title, date, cover_image },
@@ -13,15 +21,13 @@ export default function ArticlePage({
 }) {
   return (
     <>
-      <Script
-        src="https://kit.fontawesome.com/a25f409e18.js"
-        crossOrigin="anonymous"
-      ></Script>
       <div className={styles.articlePage__backBtn}>
         <Link href="/">
           <a className="hvr-icon-back">
-            <i className="fas fa-angle-left hvr-icon-back hvr-icon4"></i> Ir
-            atrás
+            <IconContext.Provider value={{ className: "hvr-icon4" }}>
+              <FaChevronLeft />
+            </IconContext.Provider>{" "}
+            Ir atrás
           </a>
         </Link>
       </div>
@@ -42,7 +48,6 @@ export default function ArticlePage({
         ></div>
       </article>
       <div className={styles.articlePage__share}>
-        <h2>¿Te ha parecido útil?</h2>
         <p>Compártelo en tus redes:</p>
         <a
           className=" hvr-grow"
@@ -50,7 +55,9 @@ export default function ArticlePage({
           target="_blank"
           rel="noreferrer"
         >
-          <i className="fa-brands fa-twitter"></i>
+          <IconContext.Provider value={{ className: " hvr-grow" }}>
+            <FaTwitterSquare />
+          </IconContext.Provider>
         </a>
         <a
           className=" hvr-grow"
@@ -58,7 +65,9 @@ export default function ArticlePage({
           target="_blank"
           rel="noreferrer"
         >
-          <i className="fa-brands fa-linkedin-in"></i>
+          <IconContext.Provider value={{ className: " hvr-grow" }}>
+            <FaLinkedin />
+          </IconContext.Provider>
         </a>
         <a
           className=" hvr-grow"
@@ -66,12 +75,17 @@ export default function ArticlePage({
           target="_blank"
           rel="noreferrer"
         >
-          <i className="fa-brands fa-facebook-f"></i>
+          <IconContext.Provider value={{ className: "hvr-grow" }}>
+            <FaFacebookSquare />
+          </IconContext.Provider>
         </a>
       </div>
       <div className={styles.articlePage__upBtn}>
         <a href="#" className="hvr-icon-up">
-          Ir arriba <i className="fas fa-angle-up hvr-icon-up hvr-icon"></i>
+          Ir arriba{" "}
+          <IconContext.Provider value={{ className: "hvr-icon" }}>
+            <FaChevronUp />
+          </IconContext.Provider>
         </a>
       </div>
     </>

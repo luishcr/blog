@@ -4,13 +4,15 @@ import matter from "gray-matter";
 import Article from "../components/Article/Article";
 import styles from "./Home.module.scss";
 import { sortByDate } from "../utils/main";
+import { FaChevronRight, FaChevronUp, FaMapMarkedAlt } from "react-icons/fa";
+import { IconContext } from "react-icons";
 
 export default function Home({ articles }) {
   return (
     <div>
       <div>
         <h1 className={styles.title}>
-          Blog<span className={styles.span}>de notas</span>
+          Blog<span className={styles.span}>note</span>
         </h1>
         <div className={styles.articles__grid}>
           {articles.map((article, index) => (
@@ -20,25 +22,27 @@ export default function Home({ articles }) {
       </div>
 
       <div className={styles.articles__location}>
-        <h2>¿Alguna errata?</h2>
         <p>
-          Puedes modificar y proponer cambios en el repositorio de
-          <br />
+          Código del blog en el repositorio de
           <a
             href="https://github.com/luishcr/blog"
             className="hvr-icon-forward hvr-icon3"
           >
-            github
-            <i className="fas fa-angle-right hvr-icon-forward hvr-icon3"></i>
+            github{" "}
+            <IconContext.Provider
+              value={{ className: "hvr-icon-forward hvr-icon3" }}
+            >
+              <FaChevronRight />
+            </IconContext.Provider>
           </a>
         </p>
         <br />
 
-        <i className="fas fa-map-marked-alt"></i>
-        <p>Desde Alicante/Alacant 👋🏽 para el mundo.</p>
-        <br />
         <a href="#" className="hvr-icon-up hvr-icon">
-          Volver arriba <i className="fas fa-angle-up hvr-icon-up hvr-icon"></i>
+          Volver arriba{" "}
+          <IconContext.Provider value={{ className: "hvr-icon" }}>
+            <FaChevronUp />
+          </IconContext.Provider>
         </a>
       </div>
     </div>

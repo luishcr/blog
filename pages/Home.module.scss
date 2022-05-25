@@ -1,13 +1,14 @@
 /*  ESTILOS DEL HOME  */
 
 .title {
+  color: var(--primary-color);
   text-align: center;
   margin: 4rem;
   font-size: 4rem;
 }
 
 .span {
-  color: var(--neutral-color);
+  color: var(--primary-color);
   font-size: 1.8rem;
   margin-left: 1rem;
   border: 1px solid var(--neutral-color);

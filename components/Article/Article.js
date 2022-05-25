@@ -1,6 +1,8 @@
 import Script from "next/script";
 import Link from "next/link";
 import styles from "./Article.module.scss";
+import { FaChevronRight } from "react-icons/fa";
+import { IconContext } from "react-icons";
 
 export default function Article({ article }) {
   return (
@@ -24,7 +26,11 @@ export default function Article({ article }) {
             <a className="hvr-icon-forward hvr-icon3">
               {" "}
               Leer más{" "}
-              <i className="fas fa-angle-right hvr-icon-forward hvr-icon3"></i>{" "}
+              <IconContext.Provider
+                value={{ className: "hvr-icon-forward hvr-icon3" }}
+              >
+                <FaChevronRight />
+              </IconContext.Provider>
             </a>
           </Link>
         </div>

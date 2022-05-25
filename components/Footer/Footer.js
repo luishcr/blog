@@ -1,62 +1,18 @@
 import styles from "./Footer.module.scss";
+import Logo from "../Header/Logo";
+import NavIcons from "../Header/NavIcons";
 
 export default function Footer() {
   return (
     <footer>
       <div className={styles.footer__background}>
-        <div className={styles.footer__logo}>
-          <a href="index.html">
-            <img
-              src="../../images/whiteLogo.png"
-              className="white-logos"
-              alt="LOGO"
-            />
-            <span>
-              <img
-                src="../../images/yellowLogo.png"
-                className="yellow-logos"
-                alt="LOGO"
-              />
-            </span>
-          </a>
-        </div>
-        <div>
-          <ul className={styles.footer__list}>
-            <li className={styles.footerSocial__item}>
-              <a
-                href="https://www.linkedin.com/in/luishcr"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <i className="fab fa-linkedin"> </i>
-              </a>
-            </li>
-            <li className={styles.footerSocial__item}>
-              <a
-                href="https://github.com/LuisHCR"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <i className="fab fa-github-square"> </i>
-              </a>
-            </li>
-            <li className={styles.footerSocial__item}>
-              <a
-                href="https://twitter.com/luishcerre"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <i className="fab fa-twitter-square"> </i>
-              </a>
-            </li>
-          </ul>
-        </div>
+        <Logo />
+        <nav className={styles.footer__navIcons}>
+          <NavIcons />
+        </nav>
+
         <div className={styles.footer__copy}>
-          <p>&copy; LuisHCR</p>
-          <br />
-        </div>
-        <div className={styles.footer__legal}>
-          <a href="https://www.luishcr.es/legal-info">Aviso legal</a>
+          <p>&copy; luishcr</p>
         </div>
       </div>
     </footer>
