@@ -263,7 +263,7 @@ apt upgrade httpie
 
 El mejor editor de código, respaldado por una gran comunidad y desarrollado por Microsoft.
 
-Su configuración es sencilla desde la interfaz gráfica, aunque tras su instalación, por defecto dispone de un configurable en la ruta C:/Users/usuario/AppData/Roaming/Code/User/settings.json, donde deberíamos de tener por lo menos estas líneas:
+Su configuración es sencilla desde la interfaz gráfica, aunque tras su instalación, por defecto también se dispone de un configurable llamado settings.json que se encuentra en la carpeta donde se han instalado visual studio code, en el cual deberíamos de tener por lo menos estas líneas de código para un correcto funcionamiento:
 
 ```json
 "editor.bracketPairColorization.enabled": true,

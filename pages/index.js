@@ -10,7 +10,7 @@ import { IconContext } from "react-icons";
 export default function Home({ articles }) {
   return (
     <div>
-      <div>
+      <section className={styles.index}>
         <h1 className={styles.title}>
           Blog<span className={styles.span}>note</span>
         </h1>
@@ -19,9 +19,9 @@ export default function Home({ articles }) {
             <Article key={index} article={article} />
           ))}
         </div>
-      </div>
+      </section>
 
-      <div className={styles.articles__location}>
+      <section className={styles.info}>
         <p>
           Código del blog en el repositorio de
           <a
@@ -44,7 +44,7 @@ export default function Home({ articles }) {
             <FaChevronUp />
           </IconContext.Provider>
         </a>
-      </div>
+      </section>
     </div>
   );
 }

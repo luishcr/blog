@@ -79,14 +79,26 @@ export default function ArticlePage({
           </IconContext.Provider>
         </a>
       </div>
-      <div className={styles.articlePage__upBtn}>
-        <a href="#" className="hvr-icon-up">
-          Ir arriba{" "}
-          <IconContext.Provider value={{ className: "hvr-icon" }}>
-            <FaChevronUp />
-          </IconContext.Provider>
-        </a>
-      </div>
+      <section className={styles.articles__end_buttons}>
+        <div className={styles.articlePage__backBtn}>
+          <Link href="/">
+            <a className="hvr-icon-back">
+              <IconContext.Provider value={{ className: "hvr-icon4" }}>
+                <FaChevronLeft />
+              </IconContext.Provider>{" "}
+              Ir atrás
+            </a>
+          </Link>
+        </div>
+        <div className={styles.articlePage__upBtn}>
+          <a href="#" className="hvr-icon-up">
+            Ir arriba{" "}
+            <IconContext.Provider value={{ className: "hvr-icon" }}>
+              <FaChevronUp />
+            </IconContext.Provider>
+          </a>
+        </div>
+      </section>
     </>
   );
 }
