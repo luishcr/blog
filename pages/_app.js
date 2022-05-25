@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>👨🏽‍💻 blog.luishcr</title>
+        <title>💻 luishcr</title>
       </Head>
 
       <Header />
