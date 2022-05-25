@@ -20,7 +20,7 @@
   --dark-color: #191919;
   --neutral-color: #9ba4b4;
   --console-color: #3b3b3b;
-  --card-background-color: #ffffff;
+  --container-background-color: #ffffff;
 }
 
 html {
@@ -32,6 +32,7 @@ body {
   min-height: 100vh;
   font-size: 2rem;
   font-family: "Azeret Mono", Helvetica, sans-serif;
+  background-color: var(--secondary-color);
 }
 
 a {
@@ -42,6 +43,14 @@ a {
   max-width: 120rem;
   margin: 2rem auto;
   padding: 1.5rem;
+  background-color: var(--container-background-color);
+  border: 0px double var(--dark-color);
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 0px 1px 7px 0px var(--primary-color);
+  -webkit-box-shadow: 0px 1px 7px 0px var(--primary-color);
+  -moz-box-shadow: 0px 1px 7px 0px var(--primary-color);
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
 
   h2 {
     color: var(--primary-color);
@@ -79,20 +88,6 @@ a {
     color: var(--terciary-color);
     transition: 500ms;
   }
-}
-
-.boxshadow {
-  -webkit-box-shadow: 0px 1px 7px 0px var(--primary-color);
-  -moz-box-shadow: 0px 1px 7px 0px var(--primary-color);
-  box-shadow: 0px 1px 7px 0px var(--primary-color);
-  background-color: var(--secondary-color);
-}
-
-.boxborder {
-  border-radius: 10px 10px 10px 10px;
-  -moz-border-radius: 10px 10px 10px 10px;
-  -webkit-border-radius: 10px 10px 10px 10px;
-  border: 0px double var(--dark-color);
 }
 
 /* EFECTOS HOVER CSS*/

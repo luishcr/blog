@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
 
       <Header />
-      <main className="container boxshadow boxborder">
+      <main className="container">
         <Component {...pageProps} />
       </main>
       <Footer />
