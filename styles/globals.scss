@@ -1,5 +1,4 @@
 /*  RESET  */
-@import url("https://fonts.googleapis.com/css2?family=Azeret+Mono&display=swap");
 
 *,
 *:before,
@@ -29,9 +28,8 @@ html {
 }
 
 body {
-  min-height: 100vh;
+  font-family: 'Azeret Mono', Helvetica, sans-serif;
   font-size: 2rem;
-  font-family: "Azeret Mono", Helvetica, sans-serif;
   background-color: var(--secondary-color);
 }
 

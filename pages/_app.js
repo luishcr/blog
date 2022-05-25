@@ -8,6 +8,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>💻 luishcr</title>
+        <meta name="description" content="luishcr blog" />
       </Head>
 
       <Header />
