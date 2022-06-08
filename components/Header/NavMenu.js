@@ -26,7 +26,7 @@ export default function NavMenu() {
 
       <li>
         <a
-          href="https://luishcr.es/docs/resume.pdf"
+          href="https://docs.luishcr.com/resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -36,10 +36,7 @@ export default function NavMenu() {
         </a>
       </li>
       <li>
-        <a
-          href="https://www.luishcr.es/contact"
-          rel="noopener noreferrer"
-        >
+        <a href="https://luishcr.com/contact" rel="noopener noreferrer">
           <IconContext.Provider value={{ className: "nav__menu_icons" }}>
             <SiMaildotru /> Contact
           </IconContext.Provider>
