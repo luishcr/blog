@@ -35,7 +35,7 @@ export default function NavIcons() {
       </li>
       <li>
         <a
-          href="https://twitter.com/Luishcerre"
+          href="https://twitter.com/luishcrDev"
           target="_blank"
           rel="noopener noreferrer"
         >
