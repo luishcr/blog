@@ -1,11 +1,6 @@
 import styles from "./Header.module.scss";
 import { IconContext } from "react-icons";
-import {
-  FaLinkedin,
-  FaGithubSquare,
-  FaTwitterSquare,
-  FaAngleDown,
-} from "react-icons/fa";
+import { FaLinkedin, FaGithubSquare, FaTwitterSquare } from "react-icons/fa";
 import { SiNotion } from "react-icons/si";
 
 export default function NavIcons() {

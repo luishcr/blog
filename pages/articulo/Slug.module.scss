@@ -94,7 +94,15 @@
 
   p {
     img {
-      width: 100%;
+      display: block;
+      margin: 1.5rem auto;
+      width: 77%;
+      border-radius: 0.5rem;
+      border: 0.5px solid darkgray;
+
+      @media (max-width: 40rem) {
+        width: 100%;
+      }
     }
     @media (max-width: 60rem) {
       text-align: justify;
