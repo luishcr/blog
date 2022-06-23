@@ -46,7 +46,7 @@ export default function ArticlePage({
           }}
         ></div>
       </article>
-      <div className={styles.articlePage__share}>
+      {/* <div className={styles.articlePage__share}>
         <p>Compártelo en tus redes:</p>
         <a
           className=" hvr-grow"
@@ -78,7 +78,7 @@ export default function ArticlePage({
             <FaFacebookSquare />
           </IconContext.Provider>
         </a>
-      </div>
+      </div> */}
       <section className={styles.articles__end_buttons}>
         <div className={styles.articlePage__backBtn}>
           <Link href="/">
