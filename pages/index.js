@@ -12,7 +12,7 @@ export default function Home({ articles }) {
     <div>
       <section className={styles.index}>
         <h1 className={styles.title}>
-          Blog<span className={styles.span}>note</span>
+          Blog<span className={styles.span}>space</span>
         </h1>
         <div className={styles.articles__grid}>
           {articles.map((article, index) => (

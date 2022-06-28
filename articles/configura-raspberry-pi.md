@@ -34,13 +34,13 @@ Resumen del procedimiento:
 
 &nbsp;
 
-- Encendemos y conectamos la Raspberry-Pi al router, modem o punto de acceso, mediante cable ethernet y averiguamos su dirección IP local asignada por DHCP desde la consola con el siguiente comando:
+- Encendemos y conectamos la Raspberry-Pi al router, modem o punto de acceso, mediante cable ethernet y averiguamos su dirección IP local asignada por DHCP desde la consola PowerShell o WSL, con el siguiente comando:
   
 ```bash
-# Windows
+# PowerShell
 arp -a | findstr "b8-27-eb dc-a6-32 e4-5f-01" 
 
-# Linux
+# WSL
 arp -na | grep -i  "b8:27:eb\|dc:a6:32\|e4:5f:01" 
 ```
 
@@ -54,7 +54,52 @@ ssh ubuntu@192.168.1.x
 
 &nbsp;
 
-- Actualizamos los paquetes, como buena práctica:
+- Si queremos cambiamos nombre del host ubuntu por raspi, por ejemplo:
+
+```bash
+sudo su
+echo "raspi" > /etc/hostname
+reboot
+```
+
+&nbsp;
+
+- Creamos llave ssh para conexión remota sin contraseña. Abrimos otra consola PowerShell o WSL y escribimos:
+
+```bash
+ssh-keygen -t rsa -b 4096
+```
+
+&nbsp;
+
+- Copiamos el contenido de la llave pública generada en ~/.ssh/id_rsa.pub, podemos cambiarle el nombre a uno más amigable, como por ejemplo: llave_ssh_raspberry_server.pub.
+
+```bash
+cd ~/.ssh
+cat ./llave_ssh_raspi_server.pub
+```
+
+&nbsp;
+
+- Pegamos el contenido de la llave ssh pública generada de la máquina windows o linux en la raspberry-pi (consola previamente conectada por ssh).
+  
+```bash
+cd ~/.ssh/
+nano ./authorized_keys
+ctrl + v
+```
+
+&nbsp;
+
+- Método alternativo, comando "scp" para copiar y pegar archivos entre máquina y servidor por ssh.
+
+```bash
+scp -r ~/.ssh/llave_ssh_raspi_server.pub ubuntu@192.168.1.x:/home/ubuntu/.ssh/authorized_keys
+```
+
+&nbsp;
+
+- Actualización de paquetes, como buena práctica:
   
 ```bash
 sudo apt update
@@ -97,7 +142,7 @@ sudo reboot
 
 &nbsp;
 
-- Instalación de Docker Engine:
+- Instalación de docker engine y docker compose:
   
 ```bash
  sudo apt-get update
@@ -106,10 +151,17 @@ sudo reboot
 
 &nbsp;
 
+- Añadimos el usuario al grupo docker para disponer de los permisos necesarios.
+```bash
+sudo usermod -aG docker $USER
+```
+
+&nbsp;
+
 - Comprobamos que funciona Docker Engine:
   
 ```bash
- sudo docker run hello-world
+docker run hello-world
 // Hello from Docker!
 // This message shows that your installation appears to be working correctly
 ```
@@ -123,7 +175,52 @@ sudo reboot
  sudo apt-get install docker-compose-plugin
 ```
 
-## Configuración de contenedores de Pi-Hole, OwnCloud, WireGuard, Portainer.
+&nbsp;
+
+- Aliases para docker compose que nos ayudan en la productividad.
+
+```bash
+echo "alias dcup='docker-compose -f ~/docker-compose.yml up -d'
+alias dcdown='docker-compose -f ~/docker-compose.yml stop'
+alias dcpull='docker-compose -f ~/docker-compose.yml pull'
+alias dclogs='docker-compose -f ~/docker-compose.yml logs -tf --tail="50" '
+alias dtail='docker logs -tf --tail="50" "$@"'" > ~/.bash_aliases
+```
+
+
+## (ACTUALIZANDO) Creación y configuración del fichero docker-compose.yml, con los servicios Pi-Hole, OwnCloud, WireGuard, Portainer.
+- Creamos el fichero docker-compose.yml en el directorio ~/home/ubuntu.
+
+```bash
+touch ~/docker-compose.yml
+```
+
+&nbsp;
+
+- Dentro de docker-compose.yml, añadimos la imagen de pi-hole según el repositorio de <a href="https://github.com/pi-hole/docker-pi-hole#quick-start" target="_blank" rel="noreferrer"> docker-pi-hole </a>.
+
+```bash
+version: "3"
+
+services:
+  pihole:
+    container_name: pihole
+    image: pihole/pihole:latest
+    # For DHCP it is recommended to remove these ports and instead add: network_mode: "host"
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "80:80/tcp"
+    environment:
+      TZ: 'Europe/Madrid'
+      WEBPASSWORD: 'aqui_PASSWORD_para_el_panel_web_admin'   
+    # Volumes store your data between container upgrades
+    volumes:
+      - './etc-pihole:/etc/pihole'
+      - './etc-dnsmasq.d:/etc/dnsmasq.d'
+
+    restart: unless-stopped
+```
 
 
 ## Información adicional.
