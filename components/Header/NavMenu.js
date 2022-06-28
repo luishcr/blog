@@ -35,13 +35,6 @@ export default function NavMenu() {
           </IconContext.Provider>
         </a>
       </li>
-      <li>
-        <a href="https://luishcr.com/contact" rel="noopener noreferrer">
-          <IconContext.Provider value={{ className: "nav__menu_icons" }}>
-            <SiMaildotru /> Contact
-          </IconContext.Provider>
-        </a>
-      </li>
     </ul>
   );
 }
