@@ -2,7 +2,6 @@ import Link from "next/link";
 import styles from "./Header.module.scss";
 import { IconContext } from "react-icons";
 import { FaHouseUser, FaBlogger, FaRegFilePdf } from "react-icons/fa";
-import { SiMaildotru } from "react-icons/si";
 
 export default function NavMenu() {
   return (

@@ -72,11 +72,11 @@ ssh-keygen -t rsa -b 4096
 
 &nbsp;
 
-- Copiamos el contenido de la llave pública generada en ~/.ssh/id_rsa.pub, podemos cambiarle el nombre a uno más amigable, como por ejemplo: llave_ssh_raspberry_server.pub.
+- Copiamos el contenido de la llave pública generada en ~/.ssh/id_rsa.pub, podemos cambiarle el nombre a uno más amigable, como por ejemplo: ssh_key_raspi_server.pub.
 
 ```bash
 cd ~/.ssh
-cat ./llave_ssh_raspi_server.pub
+cat ./ssh_key_raspi_server.pub
 ```
 
 &nbsp;
@@ -94,7 +94,7 @@ ctrl + v
 - Método alternativo, comando "scp" para copiar y pegar archivos entre máquina y servidor por ssh.
 
 ```bash
-scp -r ~/.ssh/llave_ssh_raspi_server.pub ubuntu@192.168.1.x:/home/ubuntu/.ssh/authorized_keys
+scp -r ~/.ssh/ssh_key_raspi_server.pub ubuntu@192.168.1.x:/home/ubuntu/.ssh/authorized_keys
 ```
 
 &nbsp;
@@ -227,3 +227,4 @@ services:
 - Como instalar <a href="https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#1-overview" target="_blank" rel="noreferrer"> Ubuntu Server en Raspberry Pi  </a>.
 - Raspberry Pi Documentation <a href="https://www.raspberrypi.com/documentation/computers/" target="_blank" rel="noreferrer"> Ubuntu Server en Raspberry Pi  </a>.
 - Documentación de <a href="https://docs.docker.com/engine/install/ubuntu/" target="_blank" rel="noreferrer"> Docker Engine </a> y <a href="https://docs.docker.com/compose/install/compose-plugin/#install-using-the-repository" target="_blank" rel="noreferrer"> Docker Compose </a>.
+- Documentación de <a href="https://docs.pi-hole.net/" target="_blank" rel="noreferrer"> Pi-hole </a> 
